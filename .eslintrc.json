@@ -1,0 +1,25 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier:prettier/recommended"],
+  "rules": {
+    "no-unused-vars": "error",
+    "prefer-const": "error",
+    "no-unused-expressions": "error",
+    "no-undef": "error",
+    "no-unreachable": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "globals": {
+    "process": "readonly"
+  }
+}
