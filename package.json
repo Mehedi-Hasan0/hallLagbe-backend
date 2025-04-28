@@ -13,7 +13,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --fix",
+      "eslint --fix --no-warn-ignored",
       "prettier --write"
     ]
   },
@@ -28,13 +28,15 @@
     "@typescript-eslint/parser": "^8.31.0",
     "dotenv": "^16.5.0",
     "eslint": "^9.25.1",
+    "eslint-plugin-prettier": "^5.2.6",
     "husky": "^9.1.7",
+    "jiti": "^2.4.2",
     "lint-staged": "^15.5.1",
     "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "express": "^5.1.0"
