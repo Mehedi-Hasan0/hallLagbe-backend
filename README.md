@@ -45,3 +45,78 @@ This repository contains the backend codebase for the HallLagbe project, a robus
 7. Email/Sms notification
 8. Search & Filter
 9. Review & Ratings
+
+## API endpoints
+
+#### AUTH
+
+```http
+  POST /api/v1/auth/register
+  POST /api/v1/auth/login
+  POST /api/v1/auth/logout
+  POST /api/v1/auth/reset-password
+```
+
+| Route            | Param                    | Authorization |
+| :--------------- | :----------------------- | :------------ |
+| `/auth/register` | `email,password ...more` | All           |
+| `/auth/login`    | `email, password`        | All           |
+
+#### User
+
+```http
+  GET    /api/v1/user
+  GET    /api/v1/user/profile/:id
+  PATCH  /api/v1/user/update/:id
+```
+
+| Route               | Param    | Authorization |
+| :------------------ | :------- | :------------ |
+| `/user/profile/:id` | `userId` | User, Admin   |
+| `/user/update/:id`  | `userId` | User          |
+
+#### Halls
+
+```http
+  GET     /api/v1/halls/
+  GET     /api/v1/halls/:id
+  POST    /api/v1/halls
+  PATCH   /api/v1/halls/:id
+  DELETE  /api/v1/halls/:id
+```
+
+| Route                 | Param       | Authorization     |
+| :-------------------- | :---------- | :---------------- |
+| `/halls (GET)`        |             | All               |
+| `/halls/:id (GET)`    | `hallId`    | All               |
+| `/halls (POST)`       | `hall data` | Hall owner only   |
+| `/halls/:id (PATCH)`  | `hall data` | Hall owner only   |
+| `/halls/:id (DELETE)` | `hall data` | Hall owner, Admin |
+
+#### Bookings
+
+```http
+  POST   /api/v1/bookings
+  GET    /api/v1/bookings
+  GET    /api/v1/bookings/:id
+  PATCH  /api/v1/bookings/:id/cancel
+```
+
+| Route                          | Param           | Authorization           |
+| :----------------------------- | :-------------- | :---------------------- |
+| `/bookings (POST)`             | `bookings data` | User                    |
+| `/bookings (GET)`              |                 | User, Admin, Hall owner |
+| `/bookings/:id (GET)`          | `bookingsId`    | User, Admin, Hall owner |
+| `/bookings/:id/cancel (PATCH)` | `bookingsData`  | User, Admin, Hall owner |
+
+#### Reviews
+
+```http
+  POST   /api/v1/reviews
+  GET    /api/v1/halls/:hallId/reviews
+```
+
+| Route                    | Param         | Authorization |
+| :----------------------- | :------------ | :------------ |
+| `/reviews`               | `reviewsData` | User          |
+| `/halls/:hallId/reviews` | `reviewsId`   | User          |
