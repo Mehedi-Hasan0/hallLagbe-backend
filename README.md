@@ -15,6 +15,7 @@ This repository contains the backend codebase for the HallLagbe project, a robus
 
 - **root directory**
   - **src/** - The core source code of the application. [src.md](/src/src.md) - Detailed instructions and documentation for using the source code.
+  - **config/** - The configuration file for handling environtment variables and other secrects
   - **.eslintignore:** Indicates files and directories that should be excluded from ESLint's code quality checks.
   - **.eslint.config.ts:** The core configuration file for ESLint. It defines the JavaScript linting rules and stylistic preferences enforced in the project.
   - **.gitignore:** Lists files and patterns to prevent accidental committing of development artifacts, sensitive data, or large generated files to version control.
