@@ -14,7 +14,9 @@ This repository contains the backend codebase for the HallLagbe project, a robus
 **Project Structure Overview**
 
 - **root directory**
+  - **.husky/** - GitHub pre commit hook to check for linting, and write prettier scripts for better code maintainability.
   - **src/** - The core source code of the application. [src.md](/src/src.md) - Detailed instructions and documentation for using the source code.
+  - **assets/** - Contains assets like core features, ERD.
   - **config/** - The configuration file for handling environtment variables and other secrects
   - **.eslintignore:** Indicates files and directories that should be excluded from ESLint's code quality checks.
   - **.eslint.config.ts:** The core configuration file for ESLint. It defines the JavaScript linting rules and stylistic preferences enforced in the project.
@@ -34,7 +36,7 @@ This repository contains the backend codebase for the HallLagbe project, a robus
 
 **Project core features**
 
-[Link to see details.](/HallLagbe%20core%20features.pdf)
+[Link to see details.](/assets/HallLagbe%20core%20features.pdf)
 
 1. Authentication
 2. User Dashboard
@@ -45,6 +47,8 @@ This repository contains the backend codebase for the HallLagbe project, a robus
 7. Email/Sms notification
 8. Search & Filter
 9. Review & Ratings
+
+[Link to see ERD of project.](/assets/HallLagbe%20ERD.pdf)
 
 ## API endpoints
 
